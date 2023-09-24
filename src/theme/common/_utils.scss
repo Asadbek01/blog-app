@@ -1,0 +1,42 @@
+/* Scroll styles bar for telegram widget*/
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;            
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color:#98A6B3; 
+    border-radius: 6px;    
+  }
+  
+  /* Works on Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #98A6B3 transparent;
+  }
+  
+  .center {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    width: 100%;
+    align-items: center;
+  
+    @include mq(md) {
+      padding: 0 15px;
+    }
+  
+    @media screen and (min-width: 1210px) {
+      padding: 0;
+    }
+  }
+  
+  .textCenter {
+    text-align: center;
+  }
+  

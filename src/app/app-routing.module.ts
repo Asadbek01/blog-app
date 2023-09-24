@@ -5,7 +5,7 @@ import { MainPageResolver } from './resolver/main_page.resolver';
 const routes: Routes = [
   {
     path: '',
-    // loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule),
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule),
     resolve: {
       pageData: MainPageResolver,
     }

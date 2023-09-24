@@ -1,0 +1,28 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+*/
+
+
+.ion-page {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    // overflow: auto;
+    display: flex;
+    // min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    // contain: layout size style;
+    color: #111111;
+    z-index: 0;
+  
+  }
+  
+
+html, body{
+    background-color: #EFEFEF;
+  
+  }
+@import "theme/main.scss";

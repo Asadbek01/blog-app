@@ -7,6 +7,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire/compat";
 import {HttpClientModule} from "@angular/common/http";
+
 export function dataServiceFactory() {
   return null;
 }

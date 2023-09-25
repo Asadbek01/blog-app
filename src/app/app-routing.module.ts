@@ -10,6 +10,20 @@ const routes: Routes = [
       pageData: MainPageResolver,
     }
   },
+  {
+    path: 'blogs',
+    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogPageModule),
+    resolve: {
+      pageData: MainPageResolver,
+    }
+  },
+  {
+    path: 'blog/:slug',
+    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogPageModule),
+    resolve: {
+      pageData: MainPageResolver,
+    }
+  },
 ]
 
 @NgModule({

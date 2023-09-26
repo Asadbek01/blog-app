@@ -28,6 +28,10 @@
             padding: 0;
             margin-top: -4px
         }
+        >a:hover{
+            text-decoration: none;
+            color: #162232;
+           }
     }
 
     &__name {
@@ -102,6 +106,10 @@
             padding: 32px 0;
             gap: 8px;
         }
+        >a:hover{
+            text-decoration: none;
+            color: #162232;
+           }
     }
 
     &__link {
@@ -197,5 +205,15 @@
             }
         }
     }
-
+    &__line{
+            margin: 0;
+            padding: 12px 0 25px;
+            border-top: 1px solid #BCBCBC;
+            color: #e88e3d;
+            font-size: 1.25rem;
+            line-height: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+            // text-transform: uppercase;
+    }
 }

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { HomePageRoutingModule } from './home-routing.module';
-import { HomePage } from './home.page';
+import { BlogPageRoutingModule } from './blog-routing.module';
+import { BlogPage } from './blog.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
@@ -11,9 +11,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    BlogPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [HomePage]
+  declarations: [BlogPage]
 })
-export class HomePageModule {}
+export class BlogPageModule {}

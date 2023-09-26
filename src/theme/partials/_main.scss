@@ -1,0 +1,103 @@
+.hero_container {
+    min-height: calc(100vh - 150px);
+}
+
+.content {
+    .content_img {
+        display: flex;
+        margin-bottom: 35px;
+        gap: 20px;
+
+     
+        .content_text {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            opacity: 1;
+            
+            .title {
+                font-weight: 700;
+                margin: 0 0 3px 0;
+                color: rgba(0, 0, 0, .85);
+            }
+            
+            .desc {
+                color: rgba(0, 0, 0, .5);
+                font-weight: 400;
+                margin: 9px 0 0 0;
+            }
+            
+            .socials-links {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 15px;
+                
+                a {
+                    margin-right: 15px;
+                color: #000;
+                font-size: 22px;
+            }
+            
+            .logo-telegram {
+                background-image: url('../../assets/images/telegram.svg');
+                background-size: contain;
+                /* Adjust as needed */
+                background-repeat: no-repeat;
+                /* Prevent repeating */
+            }
+        }
+        
+    }
+
+}
+.detail{
+    p{
+        font-size: 20px;
+    }
+    .btns-wrapper{
+        .btn{
+            font-size: 18px;
+        }
+    }
+}
+}
+@media (max-width: 650px) {
+    .content_img{
+        flex-direction: column;
+        align-items: flex-start !important;
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        
+        .content_text {           
+            .title {
+                font-size: 25px;
+            }
+            
+            .desc {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 651px) {
+    .content_img{
+        align-items: center;
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .content_text .title {
+            font-size: 30px;
+        }
+        
+        .content_text .desc {
+            font-size: 1.50rem;
+        }
+    }
+}

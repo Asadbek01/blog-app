@@ -1,13 +1,13 @@
-import { Component,PLATFORM_ID, Inject, } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss']
-})
-export class HomePage {
 
+@Component({
+  selector: 'app-blog-box',
+  templateUrl: './blog-box.component.html',
+  styleUrls: ['./blog-box.component.scss']
+})
+export class BlogBoxComponent {
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
   )
@@ -19,5 +19,3 @@ export class HomePage {
     }
   }
 }
-
-

@@ -4,12 +4,12 @@
     position: relative;
     z-index: 10;
     max-height: 72px;
-    margin-top: 2em;
+    // margin-top: 2em;
 
 
-    @include mq(sm) {
-        padding: 15px 0;
-    }
+    // @include mq(sm) {
+    //     padding: 15px 0;
+    // }
 
     &__container {
         position: sticky;
@@ -20,13 +20,13 @@
         max-width: 1100px;
         margin: 0 auto;
 
-        @include mq(md) {
-            padding: 0 15px;
-        }
+        // @include mq(md) {
+        //     padding: 0 15px;
+        // }
 
         @media screen and (min-width: 1210px) {
             padding: 0;
-            margin-top: -4px
+            // margin-top: -4px
         }
         >a:hover{
             text-decoration: none;
@@ -40,6 +40,9 @@
         font-weight: 700;
         letter-spacing: 0;
         text-decoration: none;
+        span{
+            // color: #e88e3d
+        }
     }
 
     @media (max-width: 580px) {
@@ -210,10 +213,11 @@
             padding: 12px 0 25px;
             border-top: 1px solid #BCBCBC;
             color: #e88e3d;
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             line-height: 1.25rem;
             font-weight: 600;
             letter-spacing: 0.04rem;
             // text-transform: uppercase;
     }
 }
+

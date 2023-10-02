@@ -14,6 +14,12 @@ app-header {
   z-index: 999;
 }
 
+// .sticky-header {
+//   position: sticky;
+//   top: 7.10%;
+//   z-index: 1000;
+  
+// }
 
 app-scroller{
   position: sticky;
@@ -36,6 +42,11 @@ button {
   border: none;
 }
 
+@media  (min-width:1562px ) {
+  // .sticky-header {
+  //   top: 7.40%
+  // }
+}
 
 
 

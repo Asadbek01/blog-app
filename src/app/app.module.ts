@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouteReuseStrategy } from '@angular/router';
 import {environment} from "../environments/environment";
-import {AngularFireModule} from "@angular/fire/compat";
 import {HttpClientModule} from "@angular/common/http";
 
 
@@ -20,7 +19,6 @@ export function dataServiceFactory() {
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },{
     provide: 'DATA_SERVICE',

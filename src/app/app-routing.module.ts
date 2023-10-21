@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageResolver } from './resolver/main_page.resolver';
+import { BlogPageResolver } from './resolver/blogs_page.resolver';
 
 const routes: Routes = [
   {
@@ -15,11 +16,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogPageModule),
     resolve: {
       pageData: MainPageResolver,
+      blogs: BlogPageResolver,
     }
   },
   {
     path: 'blog/:slug',
-    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogPageModule),
+    loadChildren: () => import('./pages/article/article.page.module').then(m => m.ArticlePageModule),
     resolve: {
       pageData: MainPageResolver,
     }

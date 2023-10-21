@@ -6,7 +6,7 @@
         letter-spacing: 0px;
         font-size: 20px;
         font-weight: 700;
-        max-height: 48px;
+        // max-height: 48px;
         line-height: 24px;
         -webkit-line-clamp: 2;
         text-overflow: ellipsis;
@@ -16,7 +16,7 @@
     &__sub-title {
         margin: 0;
         padding-top: 4px;
-        max-height: 40px;
+        max-width: 90%;
         font-size: 16px;
         font-weight: 400;
         color: rgb(107, 107, 107);

@@ -12,7 +12,7 @@ export class ApiService {
    getBlogs() : Observable<any[]> {
     let modelName = 'api/blogs';
     return new Observable<any[]>((observer) => {
-      fetch(`${environment.apiUrl}${modelName}`, {
+      fetch(`${environment.apiUrl}/${modelName}`, {
         method: 'GET',
         headers:({
           'Content-Type': 'application/json',
@@ -22,7 +22,9 @@ export class ApiService {
       })
         .then((response) => response.json() )
         .then((data) => {
-          console.log('Data from API:', data);
+         // observe data order descending
+         data &&  data.sort((a:any, b:any) => b.id - a.id);
+           // data.data.sort((a:any, b:any) => a.id - b.id);
           observer.next(data);
           observer.complete();
         })
@@ -34,5 +36,30 @@ export class ApiService {
    
   }
  
+
+getBlogSlug(slug: string) : Observable<any[]> {
+  let modelName = `api/blogs/${slug}`;
+  return new Observable<any[]>((observer) => {
+    fetch(`${environment.apiUrl}/${modelName}`, {
+      method: 'GET',
+      headers:({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${environment.bearerToken}`
+
+      })  
+    })
+      .then((response) => response.json() )
+      .then((data) => {
+        console.log('Data from API:', data);
+        observer.next(data);
+        observer.complete();
+      })
+      .catch((error) => {
+        console.error('Error fetching data from API:', error);
+        observer.error(error);
+      });
+  });
+
 }
 
+}

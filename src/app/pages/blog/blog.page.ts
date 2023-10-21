@@ -30,6 +30,7 @@ export class BlogPage {
 
   ngOnInit() {
     this.getDataFromResolver();
+    console.log('Blogs:', this.blogs);
 
   }
 
@@ -41,6 +42,7 @@ export class BlogPage {
     if (apiData) {
       this.blogs = apiData['blogs'];
       this.transferState.set(key, this.blogs); // Set data to TransferState (saving as array to keep structure returned from firebase)
+       
     }
   }
 

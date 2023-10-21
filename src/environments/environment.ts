@@ -4,7 +4,7 @@
 
 export const environment = {
     baseUrl: 'http://localhost:4200/',//https://ssrvottak.devkom.pro/
-    apiUrl: 'https://azamjonov-apis-f853756263d3.herokuapp.com/',
+    apiUrl: 'https://blog-service-boa5.onrender.com',
     production: false,
     staging: false,
     appVersion: "staging 0.0.1",
@@ -18,7 +18,7 @@ export const environment = {
         appId: "1:508509277854:web:493ebe45c64df1db9b358f",
         measurementId: "G-GPPGV2YBCE"
     },
-    bearerToken: "ac52580333570ad4db977fb220bed6a4f24ae0ce695cf6ecbbfe35e73e4337772e944d391f010e6a0ec7d82ba5eb15f872a00042e9a7a46cc66e16908306ec869f0c55367a3d111f2b1d85a366d400b1d84b01fc6f011d29710556c44d69cc5951999be5fbb99b89710f7b2a39fda96e7773b580ce7328657260bac5d6e4da36"
+    bearerToken: "6c59be9292c6020f80f1b15e39ea0d6025eba4c5a3077528218c6e2267cb0e2c83241d19aba395326ac1d8560f716497328a3a7c77695427a9f15b88082c0b346eef68263826db2ce877898c4858b929c7c3395c326adff2fcaa8e7c6cce1e51d4e36c1ed533bc322b58f3754ba6e501c5fc3292aaccea60969b2b11ec25fcf4"
   };
 
   

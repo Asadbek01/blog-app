@@ -20,9 +20,7 @@ export class BlogBoxComponent {
 
   }
   ngOnInit() {
-    console.log('Blogs:', this.blogs);
   }
-
 
   ionViewDidEnter() {
     if(isPlatformBrowser(this.platformId)) {

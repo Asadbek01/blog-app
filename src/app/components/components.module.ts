@@ -7,21 +7,26 @@ import { HeaderComponent } from './header/header.component';
 import { BlogBoxComponent } from './boxes/blog-box/blog-box.component';
 import { ArticleComponent } from './boxes/article/article.component';
 import { DicoverMoreBoxComponent } from './boxes/dicover-more-box/dicover-more-box.component';
-
+import { AppScrollerMobileComponent } from "./boxes/app-scroller-mobile/app-scroller-mobile.component";
+import { AppScrollerComponent } from "./boxes/app-scroller/app-scroller.component";
 @NgModule({
     declarations: [
         FooterComponent,
         HeaderComponent,
         BlogBoxComponent,
         ArticleComponent,
-        DicoverMoreBoxComponent
+        DicoverMoreBoxComponent,
+        AppScrollerMobileComponent,
+        AppScrollerComponent
     ],
     exports: [
         FooterComponent,
         HeaderComponent,
         BlogBoxComponent,
         ArticleComponent,
-        DicoverMoreBoxComponent
+        DicoverMoreBoxComponent,
+        AppScrollerMobileComponent,
+        AppScrollerComponent
       ],
       imports: [FormsModule, CommonModule,
         IonicModule],

@@ -1,6 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-blog-box',
@@ -8,10 +9,20 @@ import { AppService } from 'src/app/services/app.service';
   styleUrls: ['./blog-box.component.scss']
 })
 export class BlogBoxComponent {
+
+  @Input() blogs: any;
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
+    public utilService: UtilsService
   )
-  {}
+  {
+
+  }
+  ngOnInit() {
+    console.log('Blogs:', this.blogs);
+  }
+
 
   ionViewDidEnter() {
     if(isPlatformBrowser(this.platformId)) {

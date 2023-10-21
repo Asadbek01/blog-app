@@ -27,4 +27,31 @@ export class FirebaseService {
         });
     });
   }
+
+  // getBlogs() : Observable<any[]> {
+  //   console.log('Bearer token:', environment.bearerToken);
+  //   let modelName = 'api/blogs';
+  //   return new Observable<any[]>((observer) => {
+  //     fetch(`${environment.apiUrl}/${modelName}`, {
+  //       method: 'GET',
+  //       headers:({
+  //         'Content-Type': 'application/json',
+  //         'Authorization': `Bearer ${environment.bearerToken}`
+  //       })  
+  //     })
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         console.log('Data from API:', data);
+  //         observer.next(data);
+  //         observer.complete();
+  //       })
+  //       .catch((error) => {
+  //         console.error('Error fetching data from API:', error);
+  //         observer.error(error);
+  //       });
+  //   });
+   
+  // }
+
+ 
 }

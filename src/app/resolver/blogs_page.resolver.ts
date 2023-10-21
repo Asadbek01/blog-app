@@ -42,7 +42,7 @@ export class BlogPageResolver implements Resolve<any> {
     
       return this.apiService.getBlogs().pipe(
         switchMap((blogs:any) => {
-          let data:any = (blogs?blogs[0] || blogs:null);
+          let data:any = (blogs ? blogs || blogs : null);
           if (!data) {
             console.error('!!!!!!!!!!! No data in Blogs !!!!!!!!!!!!!!!');
             return of(null);

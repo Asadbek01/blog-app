@@ -1,14 +1,86 @@
-.article{
-
-    img{
-        width: 100%;
-        max-width: 680px;
-        height: 100%;
-        max-height: 500px;
-        object-fit: cover;
-    }
+.article {
+  text-decoration: none;
+  img {
+    width: 100%;
+    max-width: 680px;
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
 }
 
-.center--article{
-    max-width: 800px;
+.center--article {
+  max-width: 800px;
+}
+
+// author info
+.author {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increase the gap value to add more space */
+  margin-bottom: 50px;
+
+  &__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    // gap: 100px;
+    // align-items: s;
+    .author-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      p {
+        margin: 0;
+      }
+      .blogs__desc {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        // padding-top: 8px;
+        /* margin-bottom: 48px; */
+        font-size: 13px;
+        font-weight: 400;
+        color: #15803D;
+        >span:not(:first-child) {
+            position: relative;
+
+            // Add two dots between spans
+            &::before {
+                content: '·';
+                color: #000;
+                margin: 0 6px 0 4px;
+            }
+        }
+      }
+    }
+
+   
+    :hover {
+      text-decoration: none;
+    }
+  }
+  .author-socials {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 20px; /* Increase the gap value here as well */
+
+    a {
+      color: #000;
+      font-size: 20px;
+    }
+  }
 }

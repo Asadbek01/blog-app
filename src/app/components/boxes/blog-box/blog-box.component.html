@@ -3,7 +3,7 @@
     <div class="blogs__sub-title" >{{blog.summary}}</div>
     <div class="blogs__desc-container">
     <span class="desc-date">{{this.utilService.getMonthDay(blog?.createdAt)}}</span>
-    <span class="desc-time">{{this.utilService.getReadTime(blog?.title)}}</span>
+    <span class="desc-time">{{this.utilService.getReadTime(blog?.content)}}</span>
     <span></span>
     <div class="desc-category">
         <span>{{blog.category}}</span>

@@ -44,6 +44,23 @@ getReadTime(text: string): string {
   return `${readTime} min read`;
 }
 
+
+convertToHtmlTags(markdownText:any) {
+  // Convert **text** to <strong>text</strong>
+  const boldRegex = /\*\*(.*?)\*\*/g;
+  markdownText = markdownText.replace(boldRegex, '<strong>$1</strong>');
+
+  // Convert [text](url) to <a href="url">text</a>
+  const linkRegex = /\[(.*?)\]\((.*?)\)/g;
+  markdownText = markdownText.replace(linkRegex, '<a href="$2">$1</a>');
+
+  // img tag
+  const imgRegex = /!\[(.*?)\]\((.*?)\)/g;
+  markdownText = markdownText.replace(imgRegex, '<img src="$2" alt="$1">');
+  
+
+  return markdownText;
+}
 // What will be the argument for getReadTime()? // argumnet 
 // answer: the blog text 
 }

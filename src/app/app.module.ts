@@ -1,11 +1,11 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA, SecurityContext} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouteReuseStrategy } from '@angular/router';
-import {environment} from "../environments/environment";
 import {HttpClientModule} from "@angular/common/http";
+import { MarkdownModule } from 'ngx-markdown';
 
 
 export function dataServiceFactory() {
@@ -19,6 +19,7 @@ export function dataServiceFactory() {
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },{
     provide: 'DATA_SERVICE',

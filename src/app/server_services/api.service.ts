@@ -16,7 +16,7 @@ export class ApiService {
         method: 'GET',
         headers:({
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${environment.bearerToken}`
+          // 'Authorization': `Bearer ${environment.bearerToken}`
 
         })  
       })

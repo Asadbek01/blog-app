@@ -1,4 +1,4 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from "@angular/core";
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule, SecurityContext} from "@angular/core";
 import {CommonModule} from '@angular/common';
 import {FormsModule} from "@angular/forms";
 import {IonicModule} from "@ionic/angular";
@@ -9,6 +9,9 @@ import { ArticleComponent } from './boxes/article/article.component';
 import { DicoverMoreBoxComponent } from './boxes/dicover-more-box/dicover-more-box.component';
 import { AppScrollerMobileComponent } from "./boxes/app-scroller-mobile/app-scroller-mobile.component";
 import { AppScrollerComponent } from "./boxes/app-scroller/app-scroller.component";
+import { AuthorBoxComponent } from "./boxes/author-box/author-box.component";
+import { MarkdownModule } from 'ngx-markdown';
+
 @NgModule({
     declarations: [
         FooterComponent,
@@ -17,7 +20,8 @@ import { AppScrollerComponent } from "./boxes/app-scroller/app-scroller.componen
         ArticleComponent,
         DicoverMoreBoxComponent,
         AppScrollerMobileComponent,
-        AppScrollerComponent
+        AppScrollerComponent,
+        AuthorBoxComponent,
     ],
     exports: [
         FooterComponent,
@@ -26,10 +30,16 @@ import { AppScrollerComponent } from "./boxes/app-scroller/app-scroller.componen
         ArticleComponent,
         DicoverMoreBoxComponent,
         AppScrollerMobileComponent,
-        AppScrollerComponent
+        AppScrollerComponent,
+        AuthorBoxComponent
       ],
-      imports: [FormsModule, CommonModule,
-        IonicModule],
+      imports: [
+        FormsModule, 
+        CommonModule,
+        IonicModule,
+        MarkdownModule.forRoot(),
+    
+      ],
       providers: [],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })

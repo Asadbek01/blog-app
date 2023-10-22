@@ -1,12 +1,13 @@
-<!-- <app-header></app-header> -->
-<app-scroller></app-scroller>
+<app-header></app-header>
 <section class="container center--article">
+<app-scroller></app-scroller>
     <div class="sticky-header header__line">Blogs</div>
            <div class="blogs-container">
+            <app-author-box></app-author-box>
             <app-article-box [type]="type"></app-article-box>
            </div>
-</section>
 <app-footer></app-footer>   
 <section class="mobile-app-scroller">
     <app-scroller-mobile></app-scroller-mobile>
+</section>
 </section>

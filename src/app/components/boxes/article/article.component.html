@@ -1,15 +1,6 @@
 <div class="article" *ngIf="article && article">
-    <h1>{{ article.title }}</h1>
-    <p>Category: {{ article.category }}</p>
-    <p>Slug: {{ article.slug }}</p>
-    <p>Summary: {{ article.summary }}</p>
-    <p>Created At: {{ article.createdAt }}</p>
-    <p>Updated At: {{ article.updatedAt }}</p>
-    <p>Published At: {{ article.publishedAt }}</p>
-  
-    <!-- Display the thumbnail image if it exists -->
-<!--  content innerHtml -->
-   <!-- <markdown [data] = ""></markdown> -->
+    <h2 class="article__title">{{ article.title }}</h2>
+    <p class="article__summary">{{ article.summary }}</p>
    <div markdown [data]="article.content"></div>
   </div>
   

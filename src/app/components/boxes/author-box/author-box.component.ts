@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-author-box',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./author-box.component.scss']
 })
 export class AuthorBoxComponent {
+  @Input() article: any;
+
+  constructor(
+    public utilsService: UtilsService
+  ) {}
+
+
 
 }

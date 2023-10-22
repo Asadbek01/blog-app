@@ -12,33 +12,17 @@ import { UtilsService } from 'src/app/services/utils.service';
 })
 export class ArticleComponent {
 
-  article: any = {};
+  @Input() article: any;
   @Input() type: any;
   
-    constructor(@Inject(PLATFORM_ID) private platformId: any,
-    private apiService: ApiService,
-    private router: Router,
-    private utilsService: UtilsService
+    constructor(
+      @Inject(PLATFORM_ID) private platformId: any,
     ) {}
   
     ngOnInit() {
-      this.getObservableData(this.type);
     }
     
-  getObservableData(type: string) {
-    this.apiService.getBlogSlug(this.type).subscribe(
-      (data: any) => {
-        data.content = this.utilsService.convertToHtmlTags(data.content);
-        this.article = data;
-      },
-      (error: any) => {
-        console.log(error);
-      }
-    );
-  
-  
-  
-  }
+
 
     ionViewDidEnter() {
       if(isPlatformBrowser(this.platformId)) {

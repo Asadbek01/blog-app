@@ -6,8 +6,8 @@
     <div class="author-name">
         <p>Asadbek Azamjonov</p>
             <div class="blogs__desc">
-                <span class="desc-time">4 min read</span>
-                <span class="desc-date">23 November, 2023</span>
+                <span class="desc-time">{{this.utilsService.getReadTime(article?.content)}}</span>
+                <span class="desc-date">{{this.utilsService.getDateAndMinutes(article?.createdAt)}}</span>
             </div>
     </div>
 </div>

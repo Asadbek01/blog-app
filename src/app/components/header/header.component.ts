@@ -9,7 +9,6 @@ export class HeaderComponent {
   @Input() linkActive: string='';
   type: any[] = [];
   constructor() {this.type = window.location.pathname.split('/')
-  console.log(this.type.length)
 }
 
 }

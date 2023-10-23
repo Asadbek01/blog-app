@@ -50,7 +50,6 @@ getBlogSlug(slug: string) : Observable<any[]> {
     })
       .then((response) => response.json() )
       .then((data) => {
-        console.log('Data from API:', data);
         observer.next(data);
         observer.complete();
       })
@@ -60,6 +59,53 @@ getBlogSlug(slug: string) : Observable<any[]> {
       });
   });
 
+}
+
+
+getBlogCategory(category: string) : Observable<any[]> {
+  let modelName = `api/blogs?filters=[category,eq,${category}]`;
+  return new Observable<any[]>((observer) => {
+    fetch(`${environment.apiUrl}/${modelName}`, {
+      method: 'GET',
+      headers:({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${environment.bearerToken}`
+
+      })  
+    })
+      .then((response) => response.json() )
+      .then((data) => {
+        observer.next(data);
+        observer.complete();
+      })
+      .catch((error) => {
+        console.error('Error fetching data from API:', error);
+        observer.error(error);
+      });
+  });
+
+}
+
+getAllCategories() : Observable<any[]> {
+ let modelName = 'api/blogs?fields=category';
+   return new Observable<any[]>((observer) => {
+     fetch(`${environment.apiUrl}/${modelName}`, {
+       method: 'GET',
+       headers:({
+         'Content-Type': 'application/json',
+         'Authorization': `Bearer ${environment.bearerToken}`
+       })
+      })
+        .then((response) => response.json() )
+        .then((data) => {
+          observer.next(data);
+          observer.complete();
+        })
+        .catch((error) => {
+          console.error('Error fetching data from API:', error);
+          observer.error(error);
+        });
+});
 }
 
 }

@@ -46,11 +46,12 @@
         }
 
         .desc-category {
-            background-color: rgb(211, 208, 208);
-            border: 1px solid rgb(242, 242, 242);
+            background-color: #e2e1e1;
+            // border: 1px solid rgb(242, 242, 242);
             border-radius: 100px;
 
             span {
+                color: #000;
                 padding: 8px 16px;
                 white-space: nowrap;
             }

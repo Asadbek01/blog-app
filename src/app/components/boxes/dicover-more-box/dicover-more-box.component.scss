@@ -1,34 +1,45 @@
-.discover{
-    position: relative;
-  .text{
+.discover {
+  position: relative;
+  
+  .text {
     letter-spacing: 0px;
     font-weight: 500;
     font-size: 16px;
     color: rgb(36, 36, 36);
   }
-    &__container{
-
-    }
-    &__topics{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        .topic{
-            background-color: rgb(211, 208, 208);
-            border: 1px solid rgb(242, 242, 242);
-            border-radius: 100px;
-            a {
-                padding: 8px 16px;
-                font-size: 14px;
-                line-height: 20px;
-                font-weight: 400;
-                color: rgb(36, 36, 36);
-                white-space: nowrap;
-            }
-        }
-       
-    }
   
-}
+  &__container {
+  }
+  
+  &__topics {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    
+    .discover__contents {
+      flex: 0 0 calc(33.33% - 16px); // 16px is the total padding for .topic
+      max-width: calc(33.33% - 16px); // 16px is the total padding for .topic
+      box-sizing: border-box;
+    }
 
- 
+    .topic {
+      background-color: #e2e1e1;
+      // border: 1px solid rgb(242, 242, 242);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      text-align: center;
+      color: rgb(36, 36, 36);
+      white-space: nowrap;
+
+      a{
+        color: #000;
+        font-weight: 400;
+      }
+    }
+
+  }
+}

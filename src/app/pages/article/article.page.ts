@@ -43,7 +43,6 @@ export class ArticlePage {
 
   ionViewDidEnter() {
     if (isPlatformBrowser(this.platformId)) {
-    
       new AppService();
     }
   }

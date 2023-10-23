@@ -94,5 +94,12 @@
       color: #000;
       font-size: 20px;
     }
+    .logo-telegram {
+      background-image: url('../../assets/images/telegram.svg');
+      background-size: contain;
+      /* Adjust as needed */
+      background-repeat: no-repeat;
+      /* Prevent repeating */
+  }
   }
 }

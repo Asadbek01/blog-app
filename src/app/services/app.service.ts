@@ -15,10 +15,7 @@ private hamburgerNavigation() {
     const hamburgerButtonElement = document.querySelector('.header__hamburgerButton');
     const menuElement = document.querySelector('.header__menu');
     const appHeader = document.querySelector('app-header')
-    console.log(appHeader)
-    console.log(menuElement)
       let elements = document.querySelectorAll('.ion-page')
-      console.log(elements)
     if (hamburgerButtonElement) {
         hamburgerButtonElement.addEventListener('click', () => {
             hamburgerButtonElement.classList.toggle('header__hamburgerButton--active');

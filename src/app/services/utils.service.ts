@@ -13,31 +13,49 @@ export class UtilsService {
     const day = date.getDate();
     return `${month} ${day}`;
   }
+  getReadTime(content: any): string {
+    const text = this.extractTextFromContent(content);
 
-  getReadTime(text: string): string {
+    // Validate if text is a non-empty string before processing
+    if (typeof text !== 'string' || text.trim() === '') {
+        return '';
+    }
+
     const wordsPerMinute = 100;
     const numberOfWords = text.split(/\s/g).length;
     const minutes = numberOfWords / wordsPerMinute;
     const readTime = Math.ceil(minutes);
     return `${readTime} min read`;
+}
+
+ extractTextFromContent(content: any): string {
+    if (typeof content === 'string') {
+        // If content is already a string, use it as is
+        return content;
+    } else if (typeof content === 'object' && content.hasOwnProperty('text')) {
+        // If content is an object with a 'text' property, use the 'text' property
+        return content.text;
+    } else {
+        // Convert other types of content to string representation
+        return String(content);
+    }
+}
+
+getDateAndMinutes(dateString: string): string {
+  const date = new Date(dateString);
+
+  // Validate if date is valid before processing
+  if (isNaN(date.getTime())) {
+   return ""
   }
 
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  const hour = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
 
-  getDateAndMinutes(dateString: string): string {
-    //  26.08.2021 - 00:00
-    // we should also avoid 0:0 || 0:21
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    const hour = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours();
-    const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+  return `${day}.${month}.${year} | ${hour}:${minutes}`;
+}
 
-  
-
-    return `${day}.${month}.${year} | ${hour}:${minutes}`; // 0:21
-
-
-
-  }
 }

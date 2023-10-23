@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from 'src/app/server_services/api.service';
 
 @Component({
   selector: 'app-dicover-more-box',
@@ -7,4 +8,35 @@ import { Component } from '@angular/core';
 })
 export class DicoverMoreBoxComponent {
 
+categories: any[] = [];
+
+  constructor(
+    private apiService: ApiService,
+
+  ) { }
+
+
+  ngOnInit() {
+    this.getObservableData();
+  }
+
+  getObservableData() {
+    this.apiService.getAllCategories().subscribe(
+      (data: any) => {
+        const uniqueCategories = [...new Set(data.map((item: any) => item.category))];
+        uniqueCategories.forEach((category: any) => {
+          this.categories.push({
+            category,            
+          });
+        });
+        console.log(this.categories);
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
+  
+  
+  
+  }
 }

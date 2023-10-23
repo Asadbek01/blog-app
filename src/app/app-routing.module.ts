@@ -18,6 +18,14 @@ const routes: Routes = [
     path: 'blog/:slug',
     loadChildren: () => import('./pages/article/article.page.module').then(m => m.ArticlePageModule),
   },
+  {
+    path: 'asadbek_talks',
+    loadChildren: () => import('./pages/talks/talks.module').then(m => m.TalksPageModule),
+  },
+  {
+    path: 'tag/:slug',
+    loadChildren: () => import('./pages/tags/tags.module').then(m => m.TagsPageModule),
+  },
 ]
 
 @NgModule({

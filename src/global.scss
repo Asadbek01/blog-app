@@ -63,6 +63,13 @@ app-header:before {
   opacity: 1;
 }
 
+.center{
+
+  &--article,
+  &--tags{
+      max-width: 800px;
+  }
+}
 html,
 body {
   background-color: #EFEFEF;

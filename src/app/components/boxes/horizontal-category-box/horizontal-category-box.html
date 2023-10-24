@@ -1,0 +1,21 @@
+<!-- <div class="discover__container">
+    <p class="text">Discover more of what matters to you</p>
+    <div class="discover__topics">
+        <div *ngFor="let category of categories" class="discover__contents">
+            <div class="topic">
+                <a [href]="'/tag/' + category.category.toLowerCase()">{{category.category}}</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="wrapper">
+    <div class="icon" #arrowIcons><i id="left" class="fa-solid fa-angle-left"></i></div>
+    <div class="tabs-box" #tabsBox>
+      <div *ngFor="let tab of categories" class="tab" [ngClass]="{'active': tab.active}" (click)="onTabClick(tab)">{{ tab.category }}</div>
+      <div *ngFor="let tab of categories" class="tab" [ngClass]="{'active': tab.active}" (click)="onTabClick(tab)">{{ tab.category }}</div>
+      <div *ngFor="let tab of categories" class="tab" [ngClass]="{'active': tab.active}" (click)="onTabClick(tab)">{{ tab.category }}</div>
+    </div>
+    <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
+  </div>
+  

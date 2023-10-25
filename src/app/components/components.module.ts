@@ -11,6 +11,7 @@ import { AppScrollerMobileComponent } from "./boxes/app-scroller-mobile/app-scro
 import { AppScrollerComponent } from "./boxes/app-scroller/app-scroller.component";
 import { AuthorBoxComponent } from "./boxes/author-box/author-box.component";
 import { MarkdownModule } from 'ngx-markdown';
+import { HorizontalCategory } from "./boxes/horizontal-category-box/horizontal-category-box";
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { MarkdownModule } from 'ngx-markdown';
         AppScrollerMobileComponent,
         AppScrollerComponent,
         AuthorBoxComponent,
+        HorizontalCategory
     ],
     exports: [
         FooterComponent,
@@ -31,7 +33,8 @@ import { MarkdownModule } from 'ngx-markdown';
         DicoverMoreBoxComponent,
         AppScrollerMobileComponent,
         AppScrollerComponent,
-        AuthorBoxComponent
+        AuthorBoxComponent,
+        HorizontalCategory
       ],
       imports: [
         FormsModule, 

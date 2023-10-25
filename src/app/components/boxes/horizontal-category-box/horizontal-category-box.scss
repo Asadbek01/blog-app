@@ -1,0 +1,62 @@
+.wrapper {
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 800px;
+  // background: #e8e8e8;
+  border-radius: 13px;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      left: 0;
+      // background: linear-gradient(90deg, #e8e8e8 70%, transparent);
+
+      ion-icon {
+        font-size: 30px;
+        cursor: pointer;
+        color: #000; // Set the desired color
+        // margin-left: 15px;
+      }
+    }
+
+    &:last-child {
+      right: 0;
+      justify-content: flex-end;
+      // background: linear-gradient(-90deg, #e8e8e8 70%, transparent);
+
+      ion-icon {
+        font-size: 30px;
+        cursor: pointer;
+        color: #000; // Set the desired color
+        // margin-right: 30px;
+      }
+    }
+  }
+
+  .tabs-box {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 0 25px;
+
+    .tab {
+      cursor: pointer;
+      white-space: nowrap;
+      // background: #f5f4fd;
+      padding: 8px 15px;
+      border-radius: 30px;
+      border: 1px solid #bdbcc9;
+      a {
+        color: #000;
+      }
+    }
+  }
+}

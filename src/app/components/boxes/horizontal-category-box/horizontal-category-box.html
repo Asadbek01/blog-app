@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div class="icon" #leftArrow 
+    [style.opacity]="scrollIndex > 0 ? 1 : 0.5"
+    [style.width.px]="scrollIndex === 0 ? 50 : 120"
+
+    (click)="scrollLeft()">
+        <ion-icon name="chevron-back-circle-outline"></ion-icon>
+    </div>
+    <div class="tabs-box" #tabsBox>
+      <div *ngFor="let tab of categories" class="tab" [ngClass]="{'active': tab.active}" (click)="onTabClick(tab)">
+            <a [href]="'tag/' + tab.category.toLowerCase()">{{tab.category}}</a>
+      </div>
+      <div *ngFor="let tab of categories" class="tab" [ngClass]="{'active': tab.active}" (click)="onTabClick(tab)">
+        <a [href]="'tag/' + tab.category.toLowerCase()">{{tab.category}}</a>
+  </div>
+  <div *ngFor="let tab of categories" class="tab" [ngClass]="{'active': tab.active}" (click)="onTabClick(tab)">
+    <a [href]="'tag/' + tab.category.toLowerCase()">{{tab.category}}</a>
+</div>
+    </div>
+    <div class="icon" #rightArrow 
+    [style.opacity]="scrollIndex + 3 < categories.length ? 1 : 0.5" 
+    [style.width.px]="(scrollIndex + 3) >= categories.length ? 50 : 120"
+    (click)="scrollRight()">
+        <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+    </div>
+</div>
+
+  

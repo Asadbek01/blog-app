@@ -1,123 +1,62 @@
-// .discover {
-//   position: relative;
-  
-//   .text {
-//     letter-spacing: 0px;
-//     font-weight: 500;
-//     font-size: 16px;
-//     color: rgb(36, 36, 36);
-//   }
-  
-  
-//   &__topics {
-//     display: flex;
-//     align-items: center;
-//     // flex-wrap: wrap;
-//     gap: 8px;
-    
-//     .discover__contents {
-//       flex: 0 0 calc(33.33% - 16px); // 16px is the total padding for .topic
-//       max-width: calc(33.33% - 16px); // 16px is the total padding for .topic
-//       box-sizing: border-box;
-//     }
-
-//     .topic {
-//       background-color: #e2e1e1;
-//       // border: 1px solid rgb(242, 242, 242);
-//       border-radius: 100px;
-//       padding: 8px 16px;
-//       font-size: 14px;
-//       line-height: 20px;
-//       font-weight: 400;
-//       text-align: center;
-//       color: rgb(36, 36, 36);
-//       white-space: nowrap;
-
-//       a{
-//         color: #000;
-//         font-weight: 400;
-//       }
-//     }
-
-//   }
-// }
-
-
-/* Import Google font - Poppins */
-
-
 .wrapper {
   padding: 20px;
   position: relative;
   overflow-x: hidden;
   max-width: 800px;
-  background: #fff;
+  // background: #e8e8e8;
   border-radius: 13px;
-}
-.wrapper .icon {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  // width: 120px;
-  display: flex;
-  align-items: center;
-}
-.icon:first-child {
-  left: 0;
-  display: none;
-  background: linear-gradient(90deg, #fff 70%, transparent);
-}
-.icon:last-child {
-  right: 0;
-  justify-content: flex-end;
-  background: linear-gradient(-90deg, #fff 70%, transparent);
-}
-.icon i {
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  text-align: center;
-  // line-height: 55px;
-  border-radius: 50%;
-}
-.icon i:hover {
-  background: #efedfb;
-}
-.icon:first-child i {
-  margin-left: 15px;
-} 
-.icon:last-child i {
-  margin-right: 15px;
-} 
-.wrapper .tabs-box {
-  display: flex;
-  gap: 12px;
-  list-style: none;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-.tabs-box.dragging {
-  scroll-behavior: auto;
-  cursor: grab;
-}
-.tabs-box .tab {
-  cursor: pointer;
-  white-space: nowrap;
-  background: #f5f4fd;
-  padding: 13px 20px;
-  border-radius: 30px;
-  border: 1px solid #d8d5f2;
-}
-.tabs-box .tab:hover{
-  background: #efedfb;
-}
-.tabs-box.dragging .tab {
-  user-select: none;
-  pointer-events: none;
-}
-.tabs-box .tab.active{
-  color: #fff;
-  background: #5372F0;
-  border-color: transparent;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      left: 0;
+      // background: linear-gradient(90deg, #e8e8e8 70%, transparent);
+
+      ion-icon {
+        font-size: 30px;
+        cursor: pointer;
+        color: #000; // Set the desired color
+        // margin-left: 15px;
+      }
+    }
+
+    &:last-child {
+      right: 0;
+      justify-content: flex-end;
+      // background: linear-gradient(-90deg, #e8e8e8 70%, transparent);
+
+      ion-icon {
+        font-size: 30px;
+        cursor: pointer;
+        color: #000; // Set the desired color
+        // margin-right: 30px;
+      }
+    }
+  }
+
+  .tabs-box {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 0 25px;
+
+    .tab {
+      cursor: pointer;
+      white-space: nowrap;
+      // background: #f5f4fd;
+      padding: 8px 15px;
+      border-radius: 30px;
+      border: 1px solid #bdbcc9;
+      a {
+        color: #000;
+      }
+    }
+  }
 }

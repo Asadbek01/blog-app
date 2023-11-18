@@ -1,12 +1,12 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA, SecurityContext} from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA, SecurityContext } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouteReuseStrategy } from '@angular/router';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 import { MarkdownModule } from 'ngx-markdown';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function dataServiceFactory() {
   return null;
@@ -20,15 +20,17 @@ export function dataServiceFactory() {
     AppRoutingModule,
     HttpClientModule,
     MarkdownModule.forRoot(),
+    BrowserAnimationsModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },{
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, {
     provide: 'DATA_SERVICE',
     useFactory: dataServiceFactory
-}],
+  }],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
 })
-export class AppModule { }
+export class AppModule {
+}

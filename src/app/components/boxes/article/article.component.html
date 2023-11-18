@@ -1,5 +1,5 @@
 <div class="article" *ngIf="article && article">
-    <h2 class="article__title">{{ article.title }}</h2>
+    <h2 class="article__title">{{ article.title }}</h2> 
     <p class="article__summary">{{ article.summary }}</p>
    <div markdown [data]="article.content"></div>
   </div>

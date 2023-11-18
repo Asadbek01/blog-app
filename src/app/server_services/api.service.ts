@@ -63,7 +63,7 @@ getBlogSlug(slug: string) : Observable<any[]> {
 
 
 getBlogCategory(category: string) : Observable<any[]> {
-  let modelName = `api/blogs?filters=[category,eq,${category}]`;
+  let modelName = `api/blogs?filters[category][$eq]=${category}`;
   return new Observable<any[]>((observer) => {
     fetch(`${environment.apiUrl}/${modelName}`, {
       method: 'GET',

@@ -58,4 +58,53 @@ getDateAndMinutes(dateString: string): string {
   return `${day}.${month}.${year} | ${hour}:${minutes}`;
 }
 
+
+likeBlog(blog: any) {
+  // Implement your like functionality here
+  console.log(`Liked: ${blog.title}`);
+}
+
+shareBlog(blog: any) {
+  // Implement your share functionality here
+  console.log(`Shared: ${blog.title}`);
+}
+
+
+addEllipsisIfNeeded() {
+  // Delay to ensure that the DOM has been rendered
+  setTimeout(() => {
+    const elements = document.querySelectorAll('.two-line-ellipsis');
+   console.log(elements)
+    elements.forEach((element: any) => {
+      var maxHeight = parseFloat(getComputedStyle(element).maxHeight);
+
+      if (element.scrollHeight > maxHeight) {
+        var text = element.innerText;
+        var truncatedText = this.truncateTextToFit(element, text, maxHeight);
+        element.innerHTML = truncatedText;
+        console.log(element)
+      }
+    });
+  });
+}
+
+
+ truncateTextToFit(element:any, text:any, maxHeight:any) {
+  var mid;
+  var low = 0;
+  var high = text.length - 1;
+
+  while (low < high) {
+    mid = Math.ceil((low + high) / 2);
+    element.innerText = text.slice(0, mid + 1);
+    
+    if (element.scrollHeight <= maxHeight) {
+      low = mid;
+    } else {
+      high = mid - 1;
+    }
+  }
+
+  return text.slice(0, low) + '...';
+}
 }

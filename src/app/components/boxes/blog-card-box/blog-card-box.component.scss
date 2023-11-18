@@ -1,0 +1,42 @@
+.container{ 
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  .card{
+    min-height: 350px;
+    border-radius: 10px;
+  }
+  .card-img-top{
+    border-radius:  10px 10px  0 0;
+  }
+  .two-line-ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 90px;
+    line-height: 1.8em; 
+    text-overflow: ellipsis;
+    // text-decoration: none;
+    color: black;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .two-line-ellipsis {
+      max-height: 3.3em;
+    }
+  }
+  
+ 
+  
+  .card-buttons {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 0;
+  }
+  
+
+  .col-lg-4, .col-md-6{
+   padding: 5px;
+  }
+}

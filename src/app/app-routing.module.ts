@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogPageResolver } from './resolver/blogs_page.resolver';
+import { TagsPageResolver } from './resolver/tags_page.resolver';
 
 const routes: Routes = [
   {
@@ -25,6 +26,9 @@ const routes: Routes = [
   {
     path: 'tag/:slug',
     loadChildren: () => import('./pages/tags/tags.module').then(m => m.TagsPageModule),
+    resolve: {
+      tags: TagsPageResolver
+    }  
   },
 ]
 

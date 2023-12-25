@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    baseUrl: 'http://localhost:4200/',//https://ssrvottak.devkom.pro/
-    apiUrl: 'https://blog-service-boa5.onrender.com',
+    baseUrl: 'http://localhost:4500/',//https://ssrvottak.devkom.pro/
+    apiUrl: 'http://localhost:1337',
     production: false,
     staging: false,
     appVersion: "staging 0.0.1",

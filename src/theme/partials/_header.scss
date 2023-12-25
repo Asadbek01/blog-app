@@ -148,12 +148,14 @@
         @media (max-width: 580px) {
             display: inline-block;
             &--open {
-                border-top: 1px solid #cecece;
-                // border-radius: 0 0 32px 32px;
-                // border-radius: 0px;
+                
                 background: #EFEFEF;
                 box-shadow: 0 3px 8px 0 rgba(0,0,0,.05);
                 height: 200px;
+               
+                .mobile_header_line{
+                    border-top: 1px solid #cecece;
+                }
             }
         }
 

@@ -22,6 +22,9 @@ private hamburgerNavigation() {
             if(menuElement){
               menuElement.classList.toggle('header__hamburgerButton--open') 
               if (menuElement.classList.contains('header__hamburgerButton--open')) {
+                const hr = document.createElement("div")
+                hr.classList.add("mobile_header_line")
+                menuElement.append(hr)
                 elements[1].scrollIntoView({behavior: "smooth"});   
                    }                        
             }

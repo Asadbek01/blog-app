@@ -75,6 +75,7 @@ getBlogCategory(category: string) : Observable<any[]> {
     })
       .then((response) => response.json() )
       .then((data) => {
+        console.log(data, "data")
         observer.next(data);
         observer.complete();
       })

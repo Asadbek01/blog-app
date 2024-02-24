@@ -8,7 +8,7 @@
     "start": "ng serve ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev": "ng serve --frontend",
+    "dev": "ng serve --host frontend",
     "serve": "node dist/blog-app/server/main.js",
     "build": "ng build && ng run blog-app:server",
     "prerender": "ng run blog-app:prerender"

@@ -40,7 +40,7 @@ import { HorizontalCategory } from "./boxes/horizontal-category-box/horizontal-c
         FormsModule, 
         CommonModule,
         IonicModule,
-        MarkdownModule.forRoot(),
+        MarkdownModule.forChild(),
     
       ],
       providers: [],

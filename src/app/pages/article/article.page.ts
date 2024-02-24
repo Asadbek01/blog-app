@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/server_services/api.service';
 import { AppService } from 'src/app/services/app.service';
 import { UtilsService } from 'src/app/services/utils.service';
-
+import hljs from 'highlight.js';
 @Component({
   selector: 'app-article',
   templateUrl: './article.page.html',
@@ -31,6 +31,8 @@ export class ArticlePage {
     this.apiService.getBlogSlug(this.type).subscribe(
       (data: any) => {
         this.article = data;
+        console.log(this.article);
+        
       },
       (error: any) => {
         console.log(error);
@@ -41,9 +43,13 @@ export class ArticlePage {
   
   }
 
+  ngAfterViewInit() {
+    hljs.initHighlightingOnLoad();
+  }
   ionViewDidEnter() {
     if (isPlatformBrowser(this.platformId)) {
       new AppService();
     }
+   
   }
 }

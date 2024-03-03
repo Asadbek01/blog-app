@@ -4,7 +4,7 @@
 
 export const environment = {
     baseUrl: 'http://localhost:4500/',//https://ssrvottak.devkom.pro/
-    apiUrl: 'http://localhost:1337',
+    apiUrl: 'https://cms-asadbek.azamjonov.eu',
     production: false,
     staging: false,
     appVersion: "staging 0.0.1",
@@ -18,7 +18,7 @@ export const environment = {
         appId: "1:508509277854:web:493ebe45c64df1db9b358f",
         measurementId: "G-GPPGV2YBCE"
     },
-    bearerToken: "a9d1c0668555523a82ab31253dcbdd5d57bc83c56e688a67e1ed3635ed3bc3ff2ab438fed1fa53aa4528561afc663094e2d91ee0aaa58081769c0f3f3b41d4398899515c815fbc5b845ee8c24d9461e7c82cebb3273f6399f8b5eea0b596b22e627808af07e630db32f7abc65d3ffe8d90b649e19ad8367f6bc8d149cdf7761e"
+    bearerToken: "0659f44e8eae57c77d38663516a0a660e9c0613b56fa0d0b2221d4e14a6f0c380f4fed04c6648677110b537358afe81d4cec1e6c1c29840dbc068f784046cdb860f8b055b6c4413c4489ea7626f2451da27d22dbf693e26d4fce8d4ad39bdf49427d2179d745a3f6d1fb075ed56c15d741111f125a91ebf273846a6b74a0578a"
   };
 
   

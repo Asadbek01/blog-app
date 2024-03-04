@@ -16,21 +16,19 @@ export class ApiService {
         method: 'GET',
         headers:({
           'Content-Type': 'application/json',
-          // 'Authorization': `Bearer ${environment.bearerToken}`
-
         })  
       })
         .then((response) => response.json() )
         .then((data) => {
          // observe data order descending
-         data &&  data.sort((a:any, b:any) => b.id - a.id);
+         data && data.sort((a:any, b:any) => b.id - a.id);
            // data.data.sort((a:any, b:any) => a.id - b.id);
           observer.next(data);
           observer.complete();
         })
         .catch((error) => {
           console.error('Error fetching data from API:', error);
-          observer.error(error);
+          // observer.error(error);
         });
     });
    

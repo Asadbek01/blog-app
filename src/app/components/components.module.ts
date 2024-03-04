@@ -12,7 +12,7 @@ import { AppScrollerComponent } from "./boxes/app-scroller/app-scroller.componen
 import { AuthorBoxComponent } from "./boxes/author-box/author-box.component";
 import { MarkdownModule } from 'ngx-markdown';
 import { HorizontalCategory } from "./boxes/horizontal-category-box/horizontal-category-box";
-
+import { BlogCardBoxComponent } from "./boxes/blog-card-box/blog-card-box.component";
 @NgModule({
     declarations: [
         FooterComponent,
@@ -23,7 +23,8 @@ import { HorizontalCategory } from "./boxes/horizontal-category-box/horizontal-c
         AppScrollerMobileComponent,
         AppScrollerComponent,
         AuthorBoxComponent,
-        HorizontalCategory
+        HorizontalCategory,
+        BlogCardBoxComponent
     ],
     exports: [
         FooterComponent,
@@ -34,7 +35,8 @@ import { HorizontalCategory } from "./boxes/horizontal-category-box/horizontal-c
         AppScrollerMobileComponent,
         AppScrollerComponent,
         AuthorBoxComponent,
-        HorizontalCategory
+        HorizontalCategory,
+        BlogCardBoxComponent
       ],
       imports: [
         FormsModule, 

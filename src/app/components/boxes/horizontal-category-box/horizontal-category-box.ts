@@ -10,8 +10,8 @@ export class HorizontalCategory {
 
 categories: any[] = [];
 @ViewChild('tabsBox') tabsBox: ElementRef | undefined;
-  @ViewChild('leftArrow') leftArrow: ElementRef | undefined;
-  @ViewChild('rightArrow') rightArrow: ElementRef | undefined;
+@ViewChild('leftArrow') leftArrow: ElementRef | undefined;
+@ViewChild('rightArrow') rightArrow: ElementRef | undefined;
 
   scrollIndex = 0
   constructor(
@@ -34,7 +34,6 @@ categories: any[] = [];
             category,            
           });
         });
-        console.log(this.categories);
       },
       (error: any) => {
         console.log(error);
@@ -44,25 +43,23 @@ categories: any[] = [];
   
   
   }
- // Function to scroll the tabs to the left
+
  scrollLeft() {
   if (this.tabsBox && this.scrollIndex > 0) {
-    const scrollAmount = 100; // Adjust as needed
+    const scrollAmount = 100; 
     this.tabsBox.nativeElement.scrollLeft -= scrollAmount;
-    this.scrollIndex--; // Decrease scrollIndex when scrolling left
+    this.scrollIndex--;
   }
 }
 
-// Function to scroll the tabs to the right
 scrollRight() {
   if (this.tabsBox) {
-    const scrollAmount = 100; // Adjust as needed
+    const scrollAmount = 100;
     this.tabsBox.nativeElement.scrollLeft += scrollAmount;
-    this.scrollIndex++; // Increase scrollIndex when scrolling right
+    this.scrollIndex++;
   }
 }
 
-// Add event listeners for arrow icons click events
 ngAfterViewInit() {
   if (this.leftArrow && this.rightArrow) {
     this.leftArrow.nativeElement.addEventListener('click', () => {

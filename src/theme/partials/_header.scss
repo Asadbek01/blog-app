@@ -25,24 +25,6 @@
 
     }
 
-    &__container-article {
-        padding: 0 15px 0 15px;
-        display: flex !important;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 800px;
-        margin: 0 auto;
-
-        >a:hover{
-            text-decoration: none;
-            color: #162232;
-           }
-           @media (max-width: 580px) {
-            display: block;
-           }
-    }
-
     &__name {
         color: #162232;
         font-size: 25px;

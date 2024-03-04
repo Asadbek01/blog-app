@@ -10,25 +10,24 @@ import { UtilsService } from 'src/app/services/utils.service';
 })
 export class TagsPage {
   type= ''
+  categoryBlogs = [];
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: any,
     private apiService: ApiService,
     private utilsService: UtilsService
 
-  ) {this.type = this.router.url.split("/")[2]
-    console.log(this.type);
- 
-}
-
-  ngOnInit() {
-    this.getObservableData(this.type);
+  ) {
+    this.type = this.router.url.split("/")[2].charAt(0).toUpperCase()+ this.router.url.split("/")[2].slice(1);
+    this.getObservableData(this.type)
   }
+
+  ngOnInit() {}
   
   getObservableData(type: string) {
-    this.apiService.getBlogCategory("News").subscribe(
+    this.apiService.getBlogCategory(type).subscribe(
       (data: any) => {
-        console.log(data)
+       this.categoryBlogs = data;
       },
       (error: any) => {
         console.log(error);

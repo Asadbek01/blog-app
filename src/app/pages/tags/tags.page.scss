@@ -69,3 +69,36 @@
 .cta-button:hover {
     background-color: #2077c7;
 }
+
+// jumbtron
+
+.topic-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 30px 0;
+}
+
+.topic-container h1 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.topic-info {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+
+/* Optional: Add a bit of responsiveness */
+@media (max-width: 600px) {
+    .topic-container h1 {
+        font-size: 28px;
+    }
+    
+    .topic-info {
+        font-size: 14px;
+    }
+
+}
+

@@ -11,7 +11,7 @@
 </div>
 
 <div *ngIf="categoryBlogs && categoryBlogs.length > 0" class="row" id="">
-  <div *ngFor="let item of categoryBlogs" class="col col-sm-12 col-md-6 col-lg-4 col-box-item">
+  <div *ngFor="let item of categoryBlogs" class="col-sm-12 col-md-6 col-lg-4 col-box-item">
     <app-blog-card-box [item]="item"></app-blog-card-box>
   </div>
 </div>
